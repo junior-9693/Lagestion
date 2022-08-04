@@ -33,3 +33,4 @@ Route::middleware([
 });
 
 Route::get('/add_property_view',[AdminController::class,'addview']);
+Route::post('/upload_property',[AdminController::class,'upload']);
