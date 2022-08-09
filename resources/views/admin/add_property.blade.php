@@ -28,7 +28,7 @@
   
             </div>
             @endif
-
+ 
                 <form  class="row g-3" action="{{url('upload_property')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div style="padding: 15px" >
