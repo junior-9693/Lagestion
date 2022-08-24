@@ -67,5 +67,14 @@ public function myappointment(){
 
 
 } 
+public function cancel_appoint($id){
+
+    $data=appointment::find($id) ;
+    $data->delete();
+    return redirect()->back();
+
+
+}
+
 
 }
