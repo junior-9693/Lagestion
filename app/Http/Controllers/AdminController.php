@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Property;
-
+use App\Models\Appointment;
 class AdminController extends Controller
 {
     public function addview(){
@@ -34,6 +34,33 @@ class AdminController extends Controller
      
         return redirect()->back()->with('message','property Added Successfully');
      
+     
+     }
+
+     public function showappointment(){
+        $data = appointment::all();
+        return view('admin.showappointment',compact('data'));
+     
+     }
+     public function approved($id){
+        $data = appointment::find($id);
+        $data->status='approved';
+        $data->save();
+     
+     
+     
+        return redirect()->back();
+     
+     }
+     
+     public function canceled($id){
+        $data = appointment::find($id);
+        $data->status='Canceled';
+        $data->save();
+     
+     
+     
+        return redirect()->back();
      
      }
 }

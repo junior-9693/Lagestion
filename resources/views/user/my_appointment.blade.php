@@ -113,7 +113,7 @@
   </header>
 
   <div align="center" style="padding:70px;">
-      <table class="table table-success table-striped">
+      <table class="table table-dark"">
           <tr style="background-color: black ">
               <th style="padding: 10px;font-size:20px;color:white">property</th>
               <th style="padding: 10px;font-size:20px;color:white">Date</th>
